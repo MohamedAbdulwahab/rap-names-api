@@ -4,8 +4,14 @@ const express = require('express');
 // set all the properties/methods of express to app. 
 const app = express();
 
+// require (import) cors
+const cors = require('cors');
+
 // set port to 8000
 const PORT = 8000;
+
+// use cors to prevent server blocks. 
+app.use(cors());
 
 // object to be served from the API.
 const rappers = {
